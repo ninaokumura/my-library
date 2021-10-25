@@ -13,6 +13,11 @@ html {
   font-family: 'Amatic SC', cursive;
 }
 
+h2 {
+  font-size: 3rem;
+  padding: 0.4rem;
+}
+
 .title {
   font-size: 6rem;
   text-align: center;
@@ -34,5 +39,13 @@ html {
   font-size: 3rem;
   display: grid;
   place-items: center;
-  padding: 2rem;
+  padding: 0.5rem;
+  color: #064e3b;
+  text-decoration: none;
+}
+
+.book-details {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
 }
