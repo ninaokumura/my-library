@@ -1,0 +1,37 @@
+{
+  "books": [
+    {
+      "id": 0,
+      "title": "1Q84",
+      "author": "Haruki Murakami",
+      "image": "/images/1q84.jpg"
+    },
+
+    {
+      "id": 1,
+      "title": "American Gods",
+      "author": "Neil Gaiman",
+      "image": "/images/american-gods.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Dance Dance Dance",
+      "author": "Haruki Murakami",
+      "image": "/images/dance-dance-dance.jpg"
+    },
+
+    {
+      "id": 3,
+      "title": "Status Anxiety",
+      "author": "Alain de Botton",
+      "image": "/images/status-anxiety.jpg"
+    },
+
+    {
+      "id": 4,
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "image": "/images/brave-new-world.jpg"
+    }
+  ]
+}

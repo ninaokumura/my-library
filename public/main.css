@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ecfdf5;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Amatic SC', cursive;
+}
+
+.title {
+  font-size: 6rem;
+  text-align: center;
+  padding: 2rem;
+  color: #064e3b;
+}
+
+.book-img {
+  width: 25rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+}
+
+.home-link {
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}

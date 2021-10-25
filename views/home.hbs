@@ -1,0 +1,12 @@
+<div class='container'>
+  {{#each books}}
+    <div class='book-list'>
+      <a href='/books/{{id}}'><img
+          class='book-img'
+          src='{{image}}'
+          alt='{{title}}'
+        />
+      </a>
+    </div>
+  {{/each}}
+</div>
