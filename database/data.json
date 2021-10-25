@@ -32,6 +32,39 @@
       "title": "Brave New World",
       "author": "Aldous Huxley",
       "image": "/images/brave-new-world.jpg"
+    },
+
+    {
+      "id": 5,
+      "title": "Política é para todos",
+      "author": "Gabriela Prioli",
+      "image": "/images/politica-para-todos.jpg"
+    },
+
+    {
+      "id": 6,
+      "title": "Killing Commendatore",
+      "author": "Haruki Murakami",
+      "image": "/images/killing-commendatore.jpg"
+    },
+
+    {
+      "id": 7,
+      "title": "Sophie's World",
+      "author": "Jostein Gaarder",
+      "image": "/images/sophie-world.jpg"
+    },
+    {
+      "id": 8,
+      "title": "The Perfume",
+      "author": "Patrick Suskind",
+      "image": "/images/perfume.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Tudo o que você precisou desaprender para virar um idiota",
+      "author": "Meteoro Brasil",
+      "image": "/images/meteoro.jpg"
     }
   ]
 }
