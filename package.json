@@ -1,0 +1,19 @@
+{
+  "name": "my-library",
+  "version": "1.0.0",
+  "description": "It is a library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninaokumura/my-library.git"
+  },
+  "author": "Nina Okumura <elaineokumura@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ninaokumura/my-library/issues"
+  },
+  "homepage": "https://github.com/ninaokumura/my-library#readme"
+}
