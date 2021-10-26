@@ -45,4 +45,14 @@ function getBookById(id, cb) {
   });
 }
 
-module.exports = { getAllBooks, getBookById };
+function bookSearch(searchTitle, cb) {
+  console.log({ searchTitle });
+  getAllBooks(books => {
+    const foundBooks = books.filter(element =>
+      element.name.toLowerCase().includes(searchTitle.toLowerCase())
+    );
+    cb(foundBooks);
+  });
+}
+
+module.exports = { getAllBooks, getBookById, bookSearch };

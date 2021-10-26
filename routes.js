@@ -19,4 +19,16 @@ router.get('/:id', (req, res) => {
   });
 });
 
+// Router for search book
+router.get('/:id', (req, res) => {
+  const id = Number(req.params.id);
+
+  helpers.getBookById(id, foundBook => {
+    const templateData = {
+      ...foundBook,
+    };
+    // console.log(foundContact)
+    res.render('details', templateData);
+  });
+});
 module.exports = router;
