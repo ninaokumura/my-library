@@ -11,6 +11,14 @@ router.get('/', (req, res) => {
   });
 });
 
+router.post('/', (req, res) => {
+  const searchTerm = req.body.searchTerm;
+  helpers.bookSearch(searchTerm, books => {
+    const viewData = { books };
+    res.render('home', viewData);
+  });
+});
+
 router.get('/:id', (req, res) => {
   const id = Number(req.params.id);
   helpers.getBookById(id, foundBook => {
@@ -19,16 +27,4 @@ router.get('/:id', (req, res) => {
   });
 });
 
-// Router for search book
-router.get('/:id', (req, res) => {
-  const id = Number(req.params.id);
-
-  helpers.getBookById(id, foundBook => {
-    const templateData = {
-      ...foundBook,
-    };
-    // console.log(foundContact)
-    res.render('details', templateData);
-  });
-});
 module.exports = router;

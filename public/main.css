@@ -20,6 +20,10 @@ h2 {
   font-size: 3rem;
   padding: 0.4rem;
 }
+.app {
+  flex: 1;
+}
+
 .header {
   background-color: #064e3b;
   margin-bottom: 2rem;

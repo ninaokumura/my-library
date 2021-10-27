@@ -45,11 +45,12 @@ function getBookById(id, cb) {
   });
 }
 
-function bookSearch(searchTitle, cb) {
-  console.log({ searchTitle });
+function bookSearch(searchTerm, cb) {
   getAllBooks(books => {
-    const foundBooks = books.filter(element =>
-      element.name.toLowerCase().includes(searchTitle.toLowerCase())
+    const foundBooks = books.filter(
+      element =>
+        element.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        element.author.toLowerCase().includes(searchTerm.toLowerCase())
     );
     cb(foundBooks);
   });

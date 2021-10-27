@@ -1,7 +1,12 @@
 <aside class='aside-container'>
 
-  <form class='form' action='/search/:{{id}}' method='post'>
-    <input class='input' ype='text' name='searchTitle' placeholder='Title...' />
+  <form class='form' action='/' method='post'>
+    <input
+      class='input'
+      type='search'
+      name='searchTerm'
+      placeholder='Title or author...'
+    />
     <button class='search-btn'>search</button>
   </form>
 
@@ -9,11 +14,7 @@
 <div class='container'>
   {{#each books}}
     <div class='book-list'>
-      <a href='/books/{{id}}'><img
-          class='book-img'
-          src='{{image}}'
-          alt='{{title}}'
-        />
+      <a href='/{{id}}'><img class='book-img' src='{{image}}' alt='{{title}}' />
       </a>
     </div>
   {{/each}}

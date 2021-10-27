@@ -12,19 +12,6 @@ server.use(express.urlencoded({ extended: false }));
 server.engine('hbs', hbs({ extname: 'hbs' }));
 server.set('view engine', 'hbs');
 
-server.use('/books', routes);
-
-const dataPath = './database/data.json';
-server.get('/', (req, res) => {
-  fs.readFile(dataPath, 'utf-8', (err, data) => {
-    if (err) {
-      console.log(err.message);
-      return;
-    }
-    const template = 'home';
-    const booksData = JSON.parse(data);
-    res.render(template, booksData);
-  });
-});
+server.use(routes);
 
 module.exports = server;
