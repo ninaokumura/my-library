@@ -21,6 +21,13 @@ router.post('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   const id = Number(req.params.id);
+  if (isNaN(id)) {
+    helpers.getAllBooks(books => {
+      const viewData = { books };
+      res.render('home', viewData);
+    });
+    return;
+  }
   helpers.getBookById(id, foundBook => {
     const templateData = { ...foundBook };
     res.render('details', templateData);
@@ -40,6 +47,7 @@ router.get('/:id/edit', (req, res) => {
 router.post('/:id/edit', (req, res) => {
   const bookId = Number(req.params.id);
   helpers.getBookById(bookId, foundBook => {
+    console.log({ bookId });
     //Create an object of the updated puppy data from the request body
     const updatedBook = {
       ...foundBook,

@@ -38,9 +38,10 @@ function getAllBooks(cb) {
 // }
 
 function getBookById(id, cb) {
+  console.log({ id });
   getAllBooks(books => {
     const foundBook = books.find(element => element.id === id);
-    console.log(foundBook);
+    console.log({ foundBook });
     cb(foundBook);
   });
 }
@@ -61,7 +62,7 @@ function editBook(book, cb) {
   getAllBooks(books => {
     // find index
     const foundIndex = books.findIndex(element => element.id === book.id);
-    console.log(foundIndex);
+    // console.log(foundIndex);
 
     // Replace book in the array - use array method?
     books.splice(foundIndex, 1, book);
