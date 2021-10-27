@@ -20,6 +20,14 @@ h2 {
   font-size: 3rem;
   padding: 0.4rem;
 }
+
+label,
+input {
+  /* margin: auto; */
+  color: #064e3b;
+  text-align: center;
+}
+
 .app {
   flex: 1;
 }
@@ -27,7 +35,7 @@ h2 {
 .header {
   background-color: #064e3b;
   margin-bottom: 2rem;
-  height: 12rem;
+  height: 16rem;
 }
 
 .title {
@@ -41,6 +49,8 @@ h2 {
   width: 23rem;
   border-radius: 1.5rem;
   padding: 1rem;
+  /* margin: a
+  uto; */
 }
 
 .book-img:hover {
@@ -52,37 +62,58 @@ h2 {
   place-items: center;
 }
 
-.home-link {
-  font-size: 3rem;
+.title-link {
+  font-size: 8rem;
   display: grid;
   place-items: center;
-  padding: 0.5rem;
-  color: #064e3b;
+  color: #ecfdf5;
   text-decoration: none;
+  margin: 1rem;
 }
 
 .book-details {
   display: grid;
   place-items: center;
   padding: 1rem;
+  text-align: center;
+}
+
+.book-details > h2 {
+  font-size: 2rem;
+  font-family: 'Zen Antique Soft', serif;
+  color: #064e3b;
 }
 
 .edit-btn {
+  font-family: 'Zen Antique Soft', serif;
   padding: 0.4rem;
   width: 8rem;
   border: 0.2rem solid #064e3b;
   border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #064e3b;
 }
 
-.edit-btn:hover {
+.edit-btn:hover,
+.submit-btn:hover {
   background-color: #064e3b;
   color: #ecfdf5;
 }
 
-/* .form-container {
-  float: right;
-  margin: 1rem;
-} */
+.submit-btn {
+  font-family: 'Zen Antique Soft', serif;
+  padding: 0.4rem;
+  width: 8rem;
+  border: 0.2rem solid #064e3b;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #064e3b;
+  margin-top: 1rem;
+}
 
 .input {
   width: 30rem;
@@ -126,4 +157,12 @@ h2 {
   padding: 2rem;
   display: grid;
   place-items: center;
+}
+
+.form-item {
+  font-size: 1.8rem;
+  font-family: 'Zen Antique Soft', serif;
+  display: block;
+  margin-bottom: 1rem;
+  height: 2rem;
 }

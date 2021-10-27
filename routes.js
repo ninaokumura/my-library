@@ -27,4 +27,30 @@ router.get('/:id', (req, res) => {
   });
 });
 
+// We are going to need GET a form to edit/update the book information.
+//view form
+router.get('/:id/edit', (req, res) => {
+  const id = Number(req.params.id);
+  helpers.getBookById(id, foundBook => {
+    res.render('edit', foundBook);
+  });
+});
+
+//Edit form
+router.post('/:id/edit', (req, res) => {
+  const bookId = Number(req.params.id);
+  helpers.getBookById(bookId, foundBook => {
+    //Create an object of the updated puppy data from the request body
+    const updatedBook = {
+      ...foundBook,
+      title: req.body.title,
+      author: req.body.author,
+    };
+    // Update the book in the array
+    helpers.editBook(updatedBook, err => {
+      res.redirect(`/${bookId}`);
+    });
+  });
+});
+
 module.exports = router;

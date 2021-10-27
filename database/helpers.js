@@ -56,4 +56,27 @@ function bookSearch(searchTerm, cb) {
   });
 }
 
-module.exports = { getAllBooks, getBookById, bookSearch };
+function editBook(book, cb) {
+  const filePath = path.join(__dirname, 'data.json');
+  getAllBooks(books => {
+    // find index
+    const foundIndex = books.findIndex(element => element.id === book.id);
+    console.log(foundIndex);
+
+    // Replace book in the array - use array method?
+    books.splice(foundIndex, 1, book);
+
+    // Write the entire array back into the JSON file
+    const string = JSON.stringify({ books });
+    fs.writeFile(filePath, string, err => {
+      if (err) {
+        // handling errors
+        console.error('Error, please try again');
+        return;
+      }
+      cb();
+    });
+  });
+}
+
+module.exports = { getAllBooks, getBookById, bookSearch, editBook };

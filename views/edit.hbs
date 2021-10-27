@@ -1,0 +1,19 @@
+<div class='book-details'>
+
+  <form class='form' action='/{{id}}/edit' method='post'>
+    <img class='book-img img-form' src='{{image}}' alt='{{title}}' />
+    <label for='title' class='form-item'>
+      Title:
+      <input type='text' name='title' value='{{title}}' />
+    </label>
+
+    <label for='author' class='form-item'>
+      Author:
+      <input type='text' name='author' value='{{author}}' />
+    </label>
+
+    <input type='hidden' name='image' value='{{image}}' />
+
+    <input class='submit-btn btn' type='submit' name='' value='Submit' />
+  </form>
+</div>
